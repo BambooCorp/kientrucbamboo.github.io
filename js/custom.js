@@ -7,8 +7,8 @@
             sliderInterval: 6000,		// Interval
             speedAnimation: 600,        // Default speed of the animation
             scrollTopButtonOffset: 500, // when scrollTop Button will show
-            locations: [51.5134476, -0.1159143],    // contact map center coords
-            mapZoom: 11                             // map zoom
+            locations: [20.8353542, 105.3328607],    // contact map center coords
+            mapZoom: 16                             // map zoom
         },
         $win = $(window),
         $html = $('html'),
