@@ -932,9 +932,14 @@ ul.pagination .next:hover{
     margin: 0 0 0 21px;
 }
 
+.mainmenu ul.pull-right li.cart-list,
+.mainmenu ul.pull-right li.cart-list-empty,
+#navbar-collapse ul.pull-right li:nth-last-child(2) {
+    display: none
+}
+
 .mainmenu li.cart-list,
 .mainmenu li.cart-list-empty{
-    display: none;
     margin-left: 60px;
 }
 
