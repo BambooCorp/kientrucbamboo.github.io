@@ -934,6 +934,7 @@ ul.pagination .next:hover{
 
 .mainmenu li.cart-list,
 .mainmenu li.cart-list-empty{
+    display: none;
     margin-left: 60px;
 }
 
