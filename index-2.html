@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html id="splashpage">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Yokko</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Yokko - Responsive Multipurpose Template - v.1.0 -->
+</head>
+<body>
+
+<!-- WRAPPER -->
+<div class="wrapper">
+    <header>
+        <a href="index-2.html" class="spl-logo">—Yokko—</a>
+        <span class="spl-slogan">Responsive Multipurpose Template</span>
+    </header>
+    <article>
+        <a href="start_agency.html" class="spl-item">
+            <img src="images/splash-agency.jpg" alt="Yokko Agency">
+            <span class="spl-mask">Agency</span>
+        </a>
+        <a href="start_ecommerce.html" class="spl-item">
+            <img src="images/splash-ecommerce.jpg" alt="Yokko eCommerce">
+            <span class="spl-mask">eCommerce</span>
+        </a>
+
+        <a href="start_portfolio.html" class="spl-item">
+            <img src="images/splash-portfolio.jpg" alt="Yokko Portfolio">
+            <span class="spl-mask">Portfolio</span>
+        </a>
+        <a href="start_business.html" class="spl-item">
+            <img src="images/splash-business.jpg" alt="Yokko Business">
+            <span class="spl-mask">Business</span>
+        </a>
+    </article>
+</div>
+<!-- /.wrapper -->
+
+<!-- Panorama -->
+<div id="panorama" class=""></div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.plugins.js"></script>
+<script>
+var Pano = (function($){
+    var panorama = $('#panorama'),
+        win = $(window),
+        wid = win.width(),
+        hei = win.height(),
+        direct = 'left',
+        speed = 60;
+
+    return {
+        init: function(){
+            panorama.css({
+                'width': wid,
+                'height': hei
+            }).panoScroll({
+                direction: direct,
+                scrollSpeed: speed
+            });
+        }
+    }
+})(jQuery);
+
+Pano.init();
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-46302488-11', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
