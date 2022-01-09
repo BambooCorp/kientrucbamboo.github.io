@@ -1,0 +1,67 @@
+/*
+#wrapper {
+	width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.jw-logo:before {
+	content: "Live";
+	font-size: 12px;
+	animation-direction: alternate;
+	animation-duration: .7s;
+	animation-iteration-count: infinite;
+	animation-name: eeh53dpm-B;
+	animation-timing-function: cubic-bezier(.39,.575,.565,1);
+	background-color: hsl(350, 87%, 55%);
+	border-bottom-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	padding-bottom: 5px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-top: 5px;
+}
+*/
+
+.jwplayer.midroll .jw-skip {
+	display: none !important;
+}
+
+.jw-view-counter {
+	content: "10";
+	background: none !important;
+}
+
+.jw-view-counter::after {
+	content: attr(data-after); /* value that that refers to CSS 'content' */
+	font-size: 13px;
+	color: #FFFFFF;
+	margin-left: 6px;
+	background-image: url("../assets/eye.png");
+	background-repeat: no-repeat;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-position: left center;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	box-sizing: border-box;
+	padding-bottom: 5px;
+	padding-left: 32px;
+	padding-right: 7px;
+	padding-top: 5px;
+}
+
+@keyframes eeh53dpm-B {
+	from {
+	opacity: .7;
+	}
+	to {
+	opacity: 1;
+	}
+}
