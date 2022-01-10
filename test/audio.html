@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>HTML5 Video Player</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <script src="https://content.jwplatform.com/libraries/aG3IMhIy.js" type="text/javascript"></script> -->
+	<script src="./jwplayer-8.24.0/jwplayer.js" type="text/javascript"></script>
+	<script src="./ads-app.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="./css/custom-jw-skin.css">
+</head>
+<body>
+<div id="wrapper">
+
+<!-- <iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none">
+</iframe> -->
+<!-- <iframe src="./silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
+
+<iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+<audio preload="none" id="player" loop volume="0.5">
+	<source src="https://olafwempe.com/mp3/teasers/Ednaloy%20preview%20Teaser.mp3" type="audio/mp3">
+</audio>
+
+	<div id="player"></div>
+</div>
+
+<script>
+	var videoPlayer = jwplayer('player').setup({
+		// TODO: Please add JW Player Business or Enterprise license at here for play Advertising
+		"key": "3SYLbRo6MN5cBDxwpZh3dl1gb0lMTUOos31M5hoAlf4=",
+		"key": "CGDoM1yeGAbiPZBHlkDj/eiWR/uGZVFJK60akRShQD6kPbG3",
+		file: "https://wowza.peer5.com/live/smil:bbb_abr.smil/playlist.m3u8",
+		androidhls : true,
+		hlshtml: true,
+		withCredentials: true,
+		allowfullscreen: true,
+		primary: "html5", 
+		type: "mp4",
+		controls: true,
+		repeat: false,
+		stagevideo: false,
+		stretching: "uniform",
+		autostart: true,
+		mute: true,		//optional, but recommended
+		// mute: false,
+		logo: {
+			"file": "./assets/giraffe.png",
+			"link": "https://www.google.com",
+			"position": "top-left",
+			"hide ": true
+		},
+		abouttext: "BECi Corporation Limited",
+		advertising: {
+			client: 'vast',
+			//tag: 'https://playertest.longtailvideo.com/vast-30s-ad.xml',
+			tag: 'ads/preroll.xml',
+			skipoffset: 3,
+			loadingAd: 'Loading...',
+			skipmessage: 'Skip this in XX',
+			admessage: 'This will end in xx',
+			//admessage: ' ',
+		}
+	});
+	initMidroll(videoPlayer);
+</script>
+</body>
+</html>
