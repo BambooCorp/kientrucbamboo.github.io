@@ -13,7 +13,11 @@
 <div id="wrapper">
 	<!-- <iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none">
 	</iframe> -->
-	<iframe src="./silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+	<!-- <iframe src="./silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
+	<iframe loading="lazy" src="about:blank" type="audio/mp3" allow="autoplay" id="audio" style="display:none" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://olafwempe.com/mp3/silence/silence.mp3"></iframe><noscript><iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe></noscript>
+	<audio preload="none" id="player" loop volume="0.5">
+		<source src="https://olafwempe.com/mp3/teasers/Ednaloy%20preview%20Teaser.mp3" type="audio/mp3">
+	</audio>
 	<div id="player"></div>
 </div>
 
