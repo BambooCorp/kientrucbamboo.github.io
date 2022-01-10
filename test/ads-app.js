@@ -38,6 +38,6 @@ function initMidroll(player) {
 			player.setMute(false);
 		}
 
-		setInterval(checkMidroll, 60000, player, './proxy.php');		//location.protocol + "//" + location.host + '/proxy.php'
+		//setInterval(checkMidroll, 60000, player, './proxy.php');		//location.protocol + "//" + location.host + '/proxy.php'
 	});
 }
