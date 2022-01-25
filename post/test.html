@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<button type="button" onclick="loadDoc()">GET data</button><br/><br/>
+<button type="button" onclick="postForm()">POST HTML form</button>
+<button type="button" onclick="postJson()">POST Json</button>
+<button type="button" onclick="postJsons()">POST Jsons</button><br/><br/>
+<button type="button" onclick="putJson()">PUT Json</button><br/><br/>
+<button type="button" onclick="patchJson()">PATCH Json</button><br/><br/>
+
+<pre id="json"></pre>
+
+<script>
+
+function loadDoc() {
+	const xhttp = new XMLHttpRequest();
+	xhttp.onload = function() {
+		document.getElementById("json").innerHTML = JSON.stringify(JSON.parse(this.responseText), null, 2);
+	}
+	xhttp.open("GET", "http://34.85.116.72/rest/products/");
+	xhttp.send();
+}
+
+function postForm() {
+	const xhttp = new XMLHttpRequest();
+	xhttp.onload = function() {
+		document.getElementById("json").innerHTML = JSON.stringify(JSON.parse(this.responseText), null, 2);
+	}
+	xhttp.open("POST", "http://34.85.116.72/rest/products/", true);
+	//xhttp.open("POST", "http://127.0.0.1:8000/rest/products/", true);
+	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	//xhttp.setRequestHeader("X-CSRFToken", csrf);
+	xhttp.send('schedule_planning_cooperation_seq=1&production_number=123&製番=345');
+	//xhttp.send('schedule_planning_cooperation_seq=1&production_number=123&planned_amount=1&hourly_price=1&base_days=1&processing_time_techs=1&setup_time_techs=1');
+}
+
+function postJson() {
+	const xhttp = new XMLHttpRequest();
+	xhttp.onload = function() {
+		document.getElementById("json").innerHTML = JSON.stringify(JSON.parse(this.responseText), null, 2);
+	}
+	xhttp.open("POST", "http://34.85.116.72/rest/products/", true);
+	//xhttp.open("POST", "http://127.0.0.1:8000/rest/products/", true);
+	//xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+	xhttp.setRequestHeader("Content-Type", "application/json");
+	//xhttp.setRequestHeader("X-CSRFToken", csrf);
+	xhttp.send(JSON.stringify({
+		"schedule_planning_cooperation_seq": 1,
+		"production_number": 111,
+		//"product": 111,
+		// "日程計画連携seq": 1,
+		// "製番": '222'
+		// "planned_amount": 1,
+		// "hourly_price": 1,
+		// "base_days": 1,
+		// "processing_time_techs": 1,
+		// "setup_time_techs": 1
+	}));
+}
+
+function postJsons() {
+	const xhttp = new XMLHttpRequest();
+	xhttp.onload = function() {
+		document.getElementById("json").innerHTML = JSON.stringify(JSON.parse(this.responseText), null, 2);
+	}
+	xhttp.open("POST", "http://34.85.116.72/rest/products/", true);
+	// xhttp.open("POST", "http://127.0.0.1:8000/rest/products/", true);
+	xhttp.setRequestHeader("Content-Type", "application/json");
+	//xhttp.setRequestHeader("X-CSRFToken", csrf);
+	xhttp.send(JSON.stringify([{
+		"schedule_planning_cooperation_seq": 1,
+		"production_number": 123,
+		"planned_amount": 1,
+		"hourly_price": 1,
+		"base_days": 1,
+		"processing_time_techs": 1,
+		"setup_time_techs": 1
+	},{
+		"schedule_planning_cooperation_seq": 2,
+		"production_number": 234,
+		"planned_amount": 1,
+		"hourly_price": 1,
+		"base_days": 1,
+		"processing_time_techs": 1,
+		"setup_time_techs": 1
+	}]));
+}
+
+function putJson() {
+	const xhttp = new XMLHttpRequest();
+	xhttp.onload = function() {
+		document.getElementById("json").innerHTML = JSON.stringify(JSON.parse(this.responseText), null, 2);
+	}
+	xhttp.open("PUT", "http://34.85.116.72/rest/products/1/", true);
+	xhttp.setRequestHeader("Content-Type", "application/json");
+	xhttp.send(JSON.stringify({
+		"production_number": 222,
+		//"planned_amount": 1,
+		//"hourly_price": 1,
+		//"base_days": 1,
+		//"processing_time_techs": 1,
+		//"setup_time_techs": 1
+	}));
+}
+
+function patchJson() {
+	const xhttp = new XMLHttpRequest();
+	xhttp.onload = function() {
+		document.getElementById("json").innerHTML = JSON.stringify(JSON.parse(this.responseText), null, 2);
+	}
+	xhttp.open("PATCH", "http://34.85.116.72/rest/products/1/", true);
+	xhttp.setRequestHeader("Content-Type", "application/json");
+	xhttp.send(JSON.stringify({
+		"production_number": 333,
+		"planned_amount": 1,
+		"hourly_price": 1,
+		"base_days": 1,
+		"processing_time_techs": 1,
+		"setup_time_techs": 1
+	}));
+}
+</script>
+
+</body>
+</html>
