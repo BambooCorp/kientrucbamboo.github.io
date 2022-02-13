@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>HTML5 Video Player</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://content.jwplatform.com/libraries/aG3IMhIy.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- <iframe src="horse.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> -->
+	<iframe id="audio" src="horse.mp3" type="audio/mp3" allow="autoplay" style="display:none"></iframe>
+	<audio id="player" preload="none" loop controls volume="0.5">
+		<source src="7441162689398209012.mp3" type="audio/mp3">
+	</audio>
+	<!-- <audio id="audio" autoplay loop controls> -->
+		<!-- <source src="horse.mp3" type="audio/mp3"> -->
+	<!-- </audio> -->
+	<!-- <video id="player" autoplay> -->
+		<!-- <source src="silence.mp3" type="audio/mp3"> -->
+	<!-- </video> -->
+</div>
+
+<script>
+	/*var videoPlayer = jwplayer('player').setup({
+		"key": "3SYLbRo6MN5cBDxwpZh3dl1gb0lMTUOos31M5hoAlf4=",
+		//file: "https://wowza.peer5.com/live/smil:bbb_abr.smil/playlist.m3u8",
+		file: "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8",
+		//file: "7441162689398209012.mp3",
+		width: '880',
+		height: '495',
+		autostart: false,
+		mute: false
+	});
+	videoPlayer.on('firstFrame', function(evt){
+		console.log('firstFrame:', evt);
+		//videoPlayer.play();
+	});*/
+</script>
+</body>
+</html>
